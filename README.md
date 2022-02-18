@@ -65,7 +65,7 @@ You deploy the Dialogflow reference connection code in one of the following coup
 
 ### Local deployment
 
-To run your own instance of this sample application locally, you'll need an up-to-date version of Node.js (we tested with version 14.3.0).
+To run your own instance of this sample application locally, you'll need an up-to-date version of Node.js (we tested with version 14.18).
 
 Download this sample application code to a local folder, then go to that folder.
 
