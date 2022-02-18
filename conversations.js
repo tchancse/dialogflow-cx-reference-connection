@@ -20,7 +20,7 @@ const encoding = 'AUDIO_ENCODING_LINEAR_16'; // NEVER modify
 const sampleRateHertz = 16000; // NEVER modify
 const outputEncoding = 'OUTPUT_AUDIO_ENCODING_LINEAR_16'; // NEVER modify
 
-const STREAM_TIMEOUT_SEC = 50;
+const STREAM_TIMEOUT_SEC = 290;
 
 //-----------------
 

@@ -13,23 +13,6 @@ const reqHeaders = {
     'Accept': 'application/json'
 };
 
-//---- Dialogflow CX
-
-// const googleAppCredentials = process.env.GOOGLE_APPLICATION_CREDENTIALS;
-
-// const projectId = process.env.GCLOUD_PROJECT_ID;
-// const location = process.env.DF_AGENT_LOCATION;
-// const agentId = process.env.DF_AGENT_ID;
-// const language = process.env.DF_LANGUAGE;
-
-// const dfApiServer = location + '-dialogflow.googleapis.com';
-
-// const encoding = 'AUDIO_ENCODING_LINEAR_16'; // NEVER modify
-// const sampleRateHertz = 16000; // NEVER modify
-// const outputEncoding = 'OUTPUT_AUDIO_ENCODING_LINEAR_16'; // NEVER modify
-
-// const {SessionsClient} = require('@google-cloud/dialogflow-cx');
-
 //-------
 
 const Conversation = require('./conversations');
@@ -59,9 +42,9 @@ app.use(bodyParser.json());
 
 //-----------------------------------------
 
-// This websocket receives the caller spoken audio,
+// This WebSocket receives the caller spoken audio,
 // It connects to DialogFlow using the Dialogflow node SDK
-// It will play back the bot audio response through the websocket
+// It will play back the bot audio response through the WebSocket
 
 app.ws('/socket', async (ws, req) => {
 
@@ -143,8 +126,6 @@ app.ws('/socket', async (ws, req) => {
       //   sentimentScore = sentiment.documentSentiment.score;
       // }
 
-
-        
       // const docSentiment = sentiment.documentSentiment;
       // console.log(`Document sentiment:`);
       // console.log(`  Score: ${docSentiment.score}`);

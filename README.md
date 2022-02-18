@@ -20,7 +20,11 @@ Using your Google Cloud Console, on your corresponding Google project, make sure
 
 You may already have a DF CX agent ready, if not, please create one that will be used for the purpose here.
 
-For the next sections, we will need (a) the corresponding Google Cloud Project ID, (b) the Google Application Credentials JSON file (actual credentials file name has ".json" extension), (c) the Dialogflow CX agent location, and (d) the Dialogflow CX agent ID.
+For the next sections, we will need:
+- (a) the corresponding Google Cloud Project ID,</br>
+- (b) the Google Application Credentials JSON file (actual credentials file name has ".json" extension),</br>
+- (c) the Dialogflow CX agent location,</br>
+- and (d) the Dialogflow CX agent ID.</br></br>
 
 - To retrieve the Google Cloud Project ID:</br>
 Go to https://console.cloud.google.com, select the relevant project, under Project info section, you will see the Project ID, we will use that value to set the parameter **GCLOUD_PROJECT_ID** in the next sections,</br></br>
@@ -39,8 +43,8 @@ click on [KEYS]</br>
 click on [ADD KEY] Create new key</br>
 select JSON as key type</br>
 click on CREATE</br>
-save that key file (ending with .json) on your computer, it will need to be copied to this application folder once installed from this repository</br>
-that key file name is the value, e.g. *VonageDFCX-05768e59b7c5.json*,  
+save that key file (ending with .json) on your computer and add a leading dot to the filename (e.g. .xxxx.json), it will need to be copied to this application folder once installed from this repository</br>
+that key file name is the value, e.g. *.VonageDFCX-05768e59b7c5.json*,  
 we will use that value to set the parameter **GOOGLE_APPLICATION_CREDENTIALS** in the next sections.</br></br>
 
 - To retrieve the Dialogflow CX agent location:</br>
@@ -72,7 +76,7 @@ cp .env.example .env
 
 Edit `.env` file, and set the first 4 parameter values:</br>
 GCLOUD_PROJECT_ID=xxxxxx </br>
-GOOGLE_APPLICATION_CREDENTIALS=xxxxxxxxxxxxxxx.json</br>
+GOOGLE_APPLICATION_CREDENTIALS=.xxxxxxxxxxxxxxx.json</br>
 DF_AGENT_LOCATION=xxxxxx<br>
 DF_AGENT_ID=xxxxxxxxx<br>
 DF_LANGUAGE=en<br>
