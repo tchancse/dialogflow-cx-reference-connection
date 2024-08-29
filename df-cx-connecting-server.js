@@ -24,7 +24,7 @@ const client = new language.LanguageServiceClient();
 
 // ------- this server port
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 6000;
 
 //==========================================================
 
@@ -74,7 +74,7 @@ app.ws('/socket', async (ws, req) => {
         clearTimeout(timerId);
       };
 
-      console.log(">>> response:", response);
+      // console.log(">>> response:", response);
 
       if ( response.detectIntentResponse.outputAudio.byteLength > 0 ) {
 
@@ -84,10 +84,16 @@ app.ws('/socket', async (ws, req) => {
         console.log("Sending back audio bytes:", response.detectIntentResponse.outputAudio.byteLength);
         const replyAudio = response.detectIntentResponse.outputAudio;
 
-        const frames = replyAudio.length / 640;
-        let pos = 0;
+        // const frames = replyAudio.length / 640;
+        // let pos = 0;
+        // const timerIds = [];
+
+        // remove wav header (44-byte long)
+        const frames = (replyAudio.length - 44) / 640;
+        let pos = 44;
         const timerIds = [];
-        
+    
+        // play Dialogflow audio through WebSocket    
         for (let i = 0; i < frames + 1; i++) {
           const newpos = pos + 640;
           const data = replyAudio.slice(pos, newpos);
