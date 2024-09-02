@@ -65,6 +65,20 @@ You deploy the Dialogflow reference connection code in one of the following coup
 
 ### Local deployment
 
+#### Ngrok
+
+[Download and install ngrok](https://ngrok.com/download), an Internet tunelling service.</br>
+Sign in or sign up with [ngrok](https://ngrok.com/), from the menu, follow the **Setup and Installation** guide.
+
+Set up a domain to forward to the local port 6000 (as thi server application will be listening on port 6000).
+
+Start ngrok to listen on port 6000,</br>
+please take note of the ngrok **Enpoint URL** as it is needed when setting up the corresponding sample server application using Vonage Voice API,
+that URL looks like:</br>
+`https://yyyyyyyy.ngrok.io`
+
+#### Node.js - Application
+
 To run your own instance of this sample application locally, you'll need Node.js (we tested with version 18.19).
 
 Download this sample application code to a local folder, then go to that folder.
