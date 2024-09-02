@@ -4,7 +4,7 @@ You can use the Dialogflow CX (DF CX) reference connection code to connect a Von
 
 ## About this reference connection code
 
-Dialogflow CX reference connection makes use of the [WebSockets feature](https://docs.nexmo.com/voice/voice-api/websockets) of Vonage Voice API. When a voice call is established, a Voice API application triggers a WebSocket connection to this Dialogflow reference connection and streams the audio to and from the voice call in real time.
+Dialogflow CX reference connection makes use of the [WebSockets feature](https://developer.vonage.com/en/voice/voice-api/concepts/websockets) of Vonage Voice API. When a voice call is established, a Voice API application triggers a WebSocket connection to this Dialogflow reference connection and streams the audio to and from the voice call in real time.
 
 See https://github.com/nexmo-se/dialogflow-cx-sample-voice-application for a **sample Voice API application** using this Dialogflow CX reference connection code to connect voice calls to a DF CX agent.
 
